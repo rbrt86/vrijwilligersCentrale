@@ -1,4 +1,4 @@
 <?php
-echo 'Current PHP version: ' . phpversion();
-echo "<a href='main.php'>this is a link</a>";
+<h1>Robert is pretty lousy developer</h1>
+echo "<br/><a href='main.php'>just trying this link</a>";
 ?>

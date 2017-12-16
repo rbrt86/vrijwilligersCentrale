@@ -1,3 +1,6 @@
-<php
-echo "<html><body>Hello Icy Look at my automatic git push</body></html>";
+<?php
+echo "trying to set up a database connection";
+include 'database.php';
+
+
 ?>
