@@ -4,22 +4,21 @@
 
 // opbouwen van de connectie
 
-		$servername = "myfirstdb"; 
 
-		$username = "mysqlapplication";
+$dbhost = getenv('OPENSHIFT_MYSQL_DB_HOST') . ":" . getenv('OPENSHIFT_MYSQL_DB_PORT');
+$dbname = 'myfirstdb';
+$username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+$password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
 
-		$password = "tryoutpassword";
 
-		
 
-		$conn = new mysqli($servername,$username,$password);
+
+		$conn = new mysqli($dbhost,$username,$password,$dbname);
 
 		if ($conn->connect_error) {
 
 			die("Connection failed, cannot connect to database: ". $conn->connection_error);
 
 		}
-
-		
 
 ?>
