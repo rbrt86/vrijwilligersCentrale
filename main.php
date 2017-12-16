@@ -10,22 +10,20 @@ $result = $conn->query($clicks);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-  //     $clickNumber = '$row["clicks"];'
+       $clickNumber = '$row["clicks"];'
         echo "Number of clicks so far: " . $clickNumber."<br/>";
     }
 } else {
     echo "0 results";
 }
 
-$insert = "INSERT INTO clickCounter (clicks)
-VALUES ('1');
+$insert = "INSERT INTO clickCounter (clicks) VALUES ('1');
 
-
-if ($conn->query($insert) === TRUE) {
-  echo "<p/>Click succesvol";
-} else {
-  echo "<p/>Error: " . $sql . "<br/>" . $conn->error;
-}
+//if ($conn->query($insert) === TRUE) {
+//  echo "<p/>Click succesvol";
+//} else {
+//  echo "<p/>Error: " . $sql . "<br/>" . $conn->error;
+//}
 
 $conn->close();
 ?>
