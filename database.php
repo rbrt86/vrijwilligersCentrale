@@ -10,7 +10,9 @@ $dbname = 'myfirstdb';
 $username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
 $password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
 
-
+echo "dbhost set to ".$dbhost;
+echo "dbname set to ".$dbname;
+echo "username set to ".$username;
 
 
 		$conn = new mysqli($dbhost,$username,$password,$dbname);
