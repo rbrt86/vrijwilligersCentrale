@@ -19,11 +19,11 @@ if ($result->num_rows > 0) {
 
 $insert = "INSERT INTO clickCounter (clicks) VALUES ('1');
 
-//if ($conn->query($insert) === TRUE) {
+/*if ($conn->query($insert) === TRUE) {
 //  echo "<p/>Click succesvol";
 //} else {
 //  echo "<p/>Error: " . $sql . "<br/>" . $conn->error;
-//}
-
+}
+*/
 $conn->close();
 ?>
