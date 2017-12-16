@@ -6,13 +6,13 @@
 
 
 $dbhost = getenv('OPENSHIFT_MYSQL_DB_HOST') . ":" . getenv('OPENSHIFT_MYSQL_DB_PORT');
-$dbname = 'myfirstdb';
-$username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+$dbname = getenv('MYSQL_DATABASE');
+$username = getenv('MYSQL_USER');
 $password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
 
-echo "dbhost set to ".$dbhost;
-echo "dbname set to ".$dbname;
-echo "username set to ".$username;
+echo "<br/>dbhost set to ".$dbhost."<br/>";
+echo "dbname set to ".$dbname."<br/>";
+echo "username set to ".$username."<br/>";
 
 
 		$conn = new mysqli($dbhost,$username,$password,$dbname);
