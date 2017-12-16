@@ -10,7 +10,7 @@ $result = $conn->query($clicks);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-       $clickNumber = $row["clicks"];
+  //     $clickNumber = '$row["clicks"];'
         echo "Number of clicks so far: " . $clickNumber."<br/>";
     }
 } else {
@@ -18,12 +18,13 @@ if ($result->num_rows > 0) {
 }
 
 $insert = "INSERT INTO clickCounter (clicks)
-VALUES ('$clickNumber++');
+VALUES ('1');
+
 
 if ($conn->query($insert) === TRUE) {
   echo "<p/>Click succesvol";
 } else {
-  echo "<p/>Error: " . $sql . "<br>" . $conn->error;
+  echo "<p/>Error: " . $sql . "<br/>" . $conn->error;
 }
 
 $conn->close();
