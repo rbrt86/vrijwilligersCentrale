@@ -18,7 +18,7 @@ if ($result->num_rows > 0) {
 }
 
 $insert = "INSERT INTO clickCounter (clicks)
-VALUES ($clickNumber++)";
+VALUES ('$clickNumber++');
 
 if ($conn->query($insert) === TRUE) {
   echo "<p/>Click succesvol";
