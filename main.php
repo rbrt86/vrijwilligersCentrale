@@ -2,7 +2,7 @@
 include 'database.php';
 
 echo "<p/>page last refreshed: ".date("l h:i:s")."<p/>";
-//echo "request is being processed by". gethostname();
+echo "request is being processed by". gethostname();
 
 $clicks = "SELECT clicks FROM clickCounter";
 $result = $conn->query($clicks);
@@ -10,7 +10,7 @@ $result = $conn->query($clicks);
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-       $clickNumber = '$row["clicks"];'
+       //$clickNumber = '$row["clicks"];'
         echo "Number of clicks so far: " . $clickNumber."<br/>";
     }
 } else {
