@@ -13,7 +13,7 @@ $password = getenv('MYSQL_PASSWD');
 
 
 
-		$conn = new mysqli($username,$password,$dbname);
+		$conn = new mysqli($dbhost,$username,$password,$dbname);
 
 		if ($conn->connect_error) {
 			echo "<br/>";
