@@ -18,7 +18,7 @@ $password = getenv('MYSQL_PASSWD');
 		if ($conn->connect_error) {
 
 			die("Connection failed, cannot connect to database: ". $conn->connection_error);
-			echo "<br/>"
+			echo "<br/>";
 			echo "<br/>dbhost set to ".$dbhost."<br/>";
 			echo "dbname set to ".$dbname."<br/>";
 			echo "username set to ".$username."<br/>";
