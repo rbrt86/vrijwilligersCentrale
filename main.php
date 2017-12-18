@@ -4,7 +4,7 @@ include 'database.php';
 echo "<p/>page last refreshed: ".date("l h:i:s")."<p/>";
 echo "request is being processed by". gethostname();
 
-$clicks = "SELECT clicks FROM clickCounter";
+/*$clicks = "SELECT clicks FROM clickCounter";
 $result = $conn->query($clicks);
 
 if ($result->num_rows > 0) {
