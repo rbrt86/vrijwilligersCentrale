@@ -1,7 +1,7 @@
 <?php
 // opbouwen van de connectie
 
-$dbhost = getenv('MYSQL_SERVICE_HOST') . ":" . getenv('MYSQL_SERVICE_PORT');
+$dbhost = getenv('VwCDB_SERVICE_HOST') . ":" . getenv('MYSQL_SERVICE_PORT');
 $dbname = getenv('MYSQL_DATABASE');
 $username = getenv('MYSQL_USER');
 $password = getenv('MYSQL_PASSWD');
